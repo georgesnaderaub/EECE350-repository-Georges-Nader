@@ -41,7 +41,7 @@ cursor.execute("""
 CREATE TABLE grades (
     student_id INT,
     course_id INT,
-    grade INT CHECK (grade >= 0 AND grade <= 100)
+    grade REAL CHECK (grade >= 0 AND grade <= 100)
 )
 """)
 
