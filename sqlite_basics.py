@@ -94,9 +94,9 @@ SELECT student_id, course_id, MAX(grade)
   ORDER BY student_id''')
 for row in cursor.fetchall():
     print(row)
-print("\nAverage grade per student:")
+print("\nAverage grade per student:(across all courses)")
 cursor.execute('''
-SELECT student_id, course_id, AVG(grade) FROM grades
+SELECT student_id, AVG(grade) FROM grades
 GROUP BY student_id
 ''')
 for row in cursor.fetchall():
